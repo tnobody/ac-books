@@ -380,6 +380,9 @@ MIT
 
 @angular/material/button
 
+@angular/service-worker
+MIT
+
 @ngrx/effects
 MIT
 
