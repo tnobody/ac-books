@@ -358,6 +358,8 @@ THE SOFTWARE.
 @angular/animations
 MIT
 
+@angular/material/core
+
 @angular/material/toolbar
 
 @angular/material/form-field
@@ -365,9 +367,21 @@ MIT
 @angular/forms
 MIT
 
-@angular/material/core
+@angular/material/select
+
+@ngrx/store
+MIT
+
+@angular/material/divider
 
 @angular/material/list
+
+@angular/material/tabs
+
+@angular/material/button
+
+@ngrx/effects
+MIT
 
 core-js
 MIT
