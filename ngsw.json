@@ -12,7 +12,7 @@
         "/ac-books/main.b50130824c152ac637d5.js",
         "/ac-books/polyfills.f6ae3e8b63939c618130.js",
         "/ac-books/runtime.ec2944dd8b20ec099bf3.js",
-        "/ac-books/styles.37d4f16c82932e5d27bd.css"
+        "/ac-books/styles.fd8b2232f327afdcd9b0.css"
       ],
       "patterns": []
     },
@@ -112,7 +112,7 @@
   "dataGroups": [],
   "hashTable": {
     "/ac-books/assets/_data.json": "9d518b33c3946c236f29f8051ca49a8e51077abb",
-    "/ac-books/assets/data.json": "85bb6565c2cff150e37f41e96438090951707222",
+    "/ac-books/assets/data.json": "9dbe4b9f50d63a102d63fb26a432e3978366cde0",
     "/ac-books/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/ac-books/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/ac-books/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -196,11 +196,11 @@
     "/ac-books/assets/images/Unfinished_Portrait_First_Edition_Cover.jpg": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/ac-books/assets/images/Why_Didn%27t_They_Ask_Evans_First_Edition_Cover_1934.jpg": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/ac-books/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/ac-books/index.html": "b0f087d6cd5cfee9dab0fb1ba0d53cfcbf02d280",
+    "/ac-books/index.html": "055a9b6b51db8dad73b6e956b56a614ec69fd3e4",
     "/ac-books/main.b50130824c152ac637d5.js": "71fc7ffc6a8296aa99534d574c809538ca857fc6",
     "/ac-books/polyfills.f6ae3e8b63939c618130.js": "edc0e79fc6315db4d76b2e7e56702677a06e24c1",
     "/ac-books/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/ac-books/styles.37d4f16c82932e5d27bd.css": "0f8b0fe3c7fe5cf90c166620f543ba298316bfe9"
+    "/ac-books/styles.fd8b2232f327afdcd9b0.css": "bce51780aa4cba7599a72ae1d322452f9c2650fb"
   },
   "navigationUrls": [
     {
