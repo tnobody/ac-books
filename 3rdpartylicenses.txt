@@ -294,13 +294,7 @@ MIT
 @angular/core
 MIT
 
-@angular/common
-MIT
-
-@angular/platform-browser
-MIT
-
-@angular/router
+@angular/animations
 MIT
 
 @angular/cdk
@@ -328,6 +322,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+@angular/common
+MIT
+
 @angular/material
 MIT
 The MIT License
@@ -353,10 +350,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-@angular/material/icon
-
-@angular/animations
+@angular/platform-browser
 MIT
+
+@angular/material/button
+
+@angular/material/snack-bar
+
+@angular/router
+MIT
+
+@angular/material/icon
 
 @angular/material/core
 
@@ -377,8 +381,6 @@ MIT
 @angular/material/list
 
 @angular/material/tabs
-
-@angular/material/button
 
 @angular/service-worker
 MIT
