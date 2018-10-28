@@ -1,23 +1,26 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-import { Book } from '../../model/book.model';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {BooksByCategory} from '../../state/state-map.model';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'acb-book-list',
   template: `
-    <mat-list *ngFor="let book of books">
-      <acb-book-list-entry [book]="book"></acb-book-list-entry>
+    <mat-list>
+      <ng-container *ngFor="let bbc of booksByCategory">
+        <mat-divider></mat-divider>
+        <h3 mat-subheader>
+          <mat-icon style="margin-right: 5px;">collections_bookmark</mat-icon>
+          <span>{{bbc[0].title}}</span>
+        </h3>
+        <mat-divider></mat-divider>
+        <acb-book-list-entry [books]="bbc[1]"></acb-book-list-entry>
+      </ng-container>
     </mat-list>
   `,
   styles: []
 })
-export class BookListComponent implements OnInit {
+export class BookListComponent {
 
-  @Input() books: Book[];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() booksByCategory: BooksByCategory[];
 
 }

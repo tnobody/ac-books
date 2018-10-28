@@ -1,45 +1,29 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import { Book } from '../../model/book.model';
-import { BookService } from 'src/app/book.service';
-import { BookReadAdapterService } from 'src/app/book-read-adapter.service';
+import {BookWithRead} from '../../state/state-map.model';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'acb-book-list-entry',
   template: `
-    <mat-list-item [routerLink]="['book', slugify]">
-      <img mat-list-icon [src]="book.imgSrc" />
-      <h3 matLine>
-        {{book.title}}
-      </h3>
-      <p matLine>
-        <span *ngIf="bookRead.dk" class="flag-icon flag-icon-dk"></span>
-        <span *ngIf="bookRead.gb" class="flag-icon flag-icon-gb"></span>
-        <span *ngIf="bookRead.de" class="flag-icon flag-icon-de"></span>
-        {{book.year}}
-      </p>
-    </mat-list-item>
+    <ng-container *ngFor="let book of books">
+      <mat-list-item [routerLink]="['book', book[0].slug]">
+        <mat-icon mat-list-icon *ngIf="book[1].read">done</mat-icon>
+        <h3 matLine>
+          {{book[0].title}}
+        </h3>
+        <p matLine>
+          <span *ngIf="book[1].dk" class="flag-icon flag-icon-dk"></span>
+          <span *ngIf="book[1].gb" class="flag-icon flag-icon-gb"></span>
+          <span *ngIf="book[1].de" class="flag-icon flag-icon-de"></span>
+          {{book[0].year}}
+        </p>
+      </mat-list-item>
+    </ng-container>
   `,
   styles: []
 })
-export class BookListEntryComponent implements OnInit {
+export class BookListEntryComponent {
 
-  @Input() book: Book;
-
-  constructor(
-    readonly booksService: BookService,
-    readonly booksReadService: BookReadAdapterService
-  ) { }
-
-  get slugify() {
-    return this.booksService.slugifyName(this.book.title);
-  }
-
-  get bookRead() {
-    return this.booksReadService.getBookRead(this.slugify);
-  }
-
-  ngOnInit() {
-  }
+  @Input() books: BookWithRead[];
 
 }

@@ -1,24 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import { BookService } from '../book.service';
-import { Subject, combineLatest, BehaviorSubject } from 'rxjs';
-import { map, debounce, debounceTime, tap, filter } from 'rxjs/internal/operators';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {MatTabChangeEvent} from '@angular/material';
+import {StateService} from '../state/state.service';
+import {isReadingStatus} from '../state/filter/filte-state.model';
+import {Book} from '../state/books/book.model';
 
 @Component({
-  selector: 'app-root',
+  selector: 'acb-book-list-route',
   template: `
     <acb-search
-      (search)="filter$.next($event)"
+      (search)="state.setTextFilter($event)"
+      (category)="state.setCategoryFilter($event)"
     ></acb-search>
     <acb-book-list
-      [books]="books$ | async"
+      [booksByCategory]="state.filteredBooksByCategory$ | async"
     ></acb-book-list>
+    <div>
+      <mat-tab-group
+        color="primary"
+        mat-stretch-tabs
+        headerPosition="below"
+        [selectedIndex]="state.readingState$ | async"
+        (selectedTabChange)="filterChanged($event)"
+      >
+        <mat-tab label="Alle"></mat-tab>
+        <mat-tab label="Besitz"></mat-tab>
+        <mat-tab label="Gelesen"></mat-tab>
+      </mat-tab-group>
+    </div>
   `,
   styles: [`
     :host {
       display: flex;
       flex-direction: column;
-      max-height: 100vh;
+      height: 100vh;
     }
 
     acb-book-list {
@@ -27,25 +42,20 @@ import { map, debounce, debounceTime, tap, filter } from 'rxjs/internal/operator
     }
   `]
 })
-export class BookListRouteComponent {
-
-  readonly filter$ = new BehaviorSubject<string>('');
-  readonly books$ = combineLatest(
-    this.bookService.getBooks(),
-    this.filter$.pipe(
-      filter(f => typeof f === 'string'),
-      map(f => f.trim()),
-      debounceTime(1)
-    )
-  ).pipe(
-    map(([books, filterValue]) => filterValue.length === 0 ? books : books
-    .filter(book => book.title.toLowerCase().includes(filterValue.toLowerCase())),
-    tap(v => console.log(v))
-  ));
+export class BookListRouteComponent implements OnInit {
 
   constructor(
-    private bookService: BookService
-  ) {}
+    readonly state: StateService
+  ) {
+  }
 
+  ngOnInit() {
+  }
+
+  filterChanged({index}: MatTabChangeEvent) {
+    if (isReadingStatus(index)) {
+      this.state.setReadingStatus(index);
+    }
+  }
 
 }

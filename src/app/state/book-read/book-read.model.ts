@@ -17,6 +17,9 @@ export const createBookRead = (): BookRead => ({
     read: false
 });
 
-export interface BookReadStorage {
+export interface BookReadState {
     [bookSlug: string]: BookRead;
 }
+
+export const BOOK_READ_STORAGE_KEY = 'book-read-storage-key';
+export const bookReadInit: BookReadState = JSON.parse(localStorage.getItem(BOOK_READ_STORAGE_KEY)) || {};

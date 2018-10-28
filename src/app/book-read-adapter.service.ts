@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Languages, BookReadStorage, createBookRead } from './model/book-read.model';
-import { Book } from './model/book.model';
+import { Languages, BookReadState, createBookRead } from './state/book-read/book-read.model';
 
 @Injectable({
     providedIn: 'root'
@@ -15,13 +14,13 @@ export class BookReadAdapterService {
     constructor() {
     }
 
-    private _data: BookReadStorage | null = null;
+    private _data: BookReadState | null = null;
 
-    get data(): BookReadStorage {
+    get data(): BookReadState {
         return this._data || JSON.parse(this.storage.getItem(BookReadAdapterService.storageKey)) || {};
     }
 
-    set data(data: BookReadStorage) {
+    set data(data: BookReadState) {
         this.storage.setItem(BookReadAdapterService.storageKey, JSON.stringify(data));
         this._data = null;
     }
@@ -46,7 +45,7 @@ export class BookReadAdapterService {
         return this.data[slug] || createBookRead();
     }
 
-    private update(writeAction: (curr: BookReadStorage) => BookReadStorage) {
+    private update(writeAction: (curr: BookReadState) => BookReadState) {
         this.data = writeAction({...this.data});
     }
 }
