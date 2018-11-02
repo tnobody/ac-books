@@ -3,7 +3,7 @@ import {selectAllBooks} from './books/book-selector.class';
 import {selectAllCategories} from './categories/categories-selector.class';
 import {Category} from './categories/categories.model';
 import {Book} from './books/book.model';
-import {FilterState} from './filter/filte-state.model';
+import {FilterState, ReadingStatus} from './filter/filte-state.model';
 import {selectFilter} from './filter/filter-selector.class';
 import {BookRead, createBookRead} from './book-read/book-read.model';
 import {selectBookRead} from './book-read/book-read-selector.class';
@@ -21,15 +21,17 @@ export const selectBooksWithRead = createSelector(
 
 type BookFilterPredicate = (b: BookRead) => boolean;
 
-const FilterIndexMap = {
+const FilterIndexMap: {[name: string]: ReadingStatus} = {
   ALL: 0,
   OWN: 1,
-  READ: 2
+  READ: 2,
+  MISSING: 3
 };
 const filters: { [key: string]: BookFilterPredicate } = {
   [FilterIndexMap.ALL]: (_) => true,
   [FilterIndexMap.OWN]: (book: BookRead) => book.de || book.dk || book.gb,
-  [FilterIndexMap.READ]: (book: BookRead) => book.read
+  [FilterIndexMap.READ]: (book: BookRead) => book.read,
+  [FilterIndexMap.MISSING]: (book: BookRead) => !(book.de || book.dk || book.gb || book.read)
 };
 
 export const selectFilteredBooks = createSelector(

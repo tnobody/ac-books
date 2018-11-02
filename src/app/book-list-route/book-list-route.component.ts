@@ -26,6 +26,7 @@ import {Book} from '../state/books/book.model';
         <mat-tab label="Alle"></mat-tab>
         <mat-tab label="Besitz"></mat-tab>
         <mat-tab label="Gelesen"></mat-tab>
+        <mat-tab label="Fehlt"></mat-tab>
       </mat-tab-group>
     </div>
   `,
