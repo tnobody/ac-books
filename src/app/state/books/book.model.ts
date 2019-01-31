@@ -5,6 +5,7 @@ export interface Book {
     order: number;
     slug: string;
     cat: string;
+    year: number;
 }
 
 export interface BookResponse {
