@@ -3,9 +3,14 @@ import {SwUpdate} from '@angular/service-worker';
 import {MatSnackBar, MatSnackBarRef} from '@angular/material';
 import {OverlayContainer} from '@angular/cdk/overlay';
 import {switchMap} from 'rxjs/operators';
+import { RouterOutlet } from '@angular/router';
+import { slideInAnimation } from './app.animations';
 
 @Component({
   selector: 'acb-root',
+  animations: [
+    slideInAnimation
+  ],
   template: `
     <ng-template #updateSnackBar>
       <div style="display: flex; flex: 1; flex-direction: row; align-content: space-between; align-self: center">
@@ -17,7 +22,9 @@ import {switchMap} from 'rxjs/operators';
         </div>
       </div>
     </ng-template>
-    <router-outlet></router-outlet>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
   `,
   styles: [`
     :host {
@@ -58,5 +65,9 @@ export class AppComponent implements OnInit {
   askForUpdate() {
     this.snackBarRef = this.snackBar.openFromTemplate(this.updateSnackBar, {});
     return this.snackBarRef.onAction();
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }
