@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href '/ac-books/'; npm run ngh",
+    "deploy": "ng build --prod --base-href '/ac-books/' && npm run ngh",
     "ngh": "ngh --dir=dist/ac-books --repo=https://GH_TOKEN@github.com/tnobody/ac-books.git"
   },
   "private": true,
