@@ -1,0 +1,713 @@
+{
+  "cats": [
+    {
+      "title": "The Poirot Novels",
+      "slug": "the-poirot-novels"
+    },
+    {
+      "title": "The Poirot Short Story Collections",
+      "slug": "the-poirot-short-story-collections"
+    },
+    {
+      "title": "Poirot Novels Written by Sophie Hannah",
+      "slug": "poirot-novels-written-by-sophie-hannah"
+    },
+    {
+      "title": "The Miss Marple Novels",
+      "slug": "the-miss-marple-novels"
+    },
+    {
+      "title": "The Miss Marple Short Story Collections",
+      "slug": "the-miss-marple-short-story-collections"
+    },
+    {
+      "title": "The Tommy and Tuppence Novels",
+      "slug": "the-tommy-and-tuppence-novels"
+    },
+    {
+      "title": "The Tommy and Tuppence Short Story Collection",
+      "slug": "the-tommy-and-tuppence-short-story-collection"
+    },
+    {
+      "title": "Novels Written as Part of the Detection Club",
+      "slug": "novels-written-as-part-of-the-detection-club"
+    },
+    {
+      "title": "Novels as Mary Westmacott",
+      "slug": "novels-as-mary-westmacott"
+    },
+    {
+      "title": "Other Novels",
+      "slug": "other-novels"
+    },
+    {
+      "title": "Other Short Story Collections",
+      "slug": "other-short-story-collections"
+    },
+    {
+      "title": "4 The Harlequin Tea Set",
+      "slug": "4-the-harlequin-tea-set"
+    },
+    {
+      "title": "Related articles",
+      "slug": "related-articles"
+    },
+    {
+      "title": "Latest articles",
+      "slug": "latest-articles"
+    }
+  ],
+  "books": [
+    {
+      "cat": "the-poirot-novels",
+      "title": "The Mysterious Affair at Styles",
+      "order": 1,
+      "slug": "the-mysterious-affair-at-styles",
+      "year": 1920
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "The Murder on the Links",
+      "order": 2,
+      "slug": "the-murder-on-the-links",
+      "year": 1923
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "The Murder of Roger Ackroyd",
+      "order": 3,
+      "slug": "the-murder-of-roger-ackroyd",
+      "year": 1926
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "The Big Four",
+      "order": 4,
+      "slug": "the-big-four",
+      "year": 1927
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "The Mystery of the Blue Train",
+      "order": 5,
+      "slug": "the-mystery-of-the-blue-train",
+      "year": 1928
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Peril at End House",
+      "order": 6,
+      "slug": "peril-at-end-house",
+      "year": 1932
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Lord Edgware Dies",
+      "order": 7,
+      "slug": "lord-edgware-dies",
+      "year": 1933
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Murder on the Orient Express",
+      "order": 8,
+      "slug": "murder-on-the-orient-express",
+      "year": 1934
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Death in the Clouds",
+      "order": 9,
+      "slug": "death-in-the-clouds",
+      "year": 1935
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Murder in Mesopotamia",
+      "order": 10,
+      "slug": "murder-in-mesopotamia",
+      "year": 1936
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "The ABC Murders",
+      "order": 11,
+      "slug": "the-abc-murders",
+      "year": 1936
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Cards on the Table",
+      "order": 12,
+      "slug": "cards-on-the-table",
+      "year": 1936
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Dumb Witness",
+      "order": 13,
+      "slug": "dumb-witness",
+      "year": 1937
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Death on the Nile",
+      "order": 14,
+      "slug": "death-on-the-nile",
+      "year": 1937
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Appointment with Death",
+      "order": 15,
+      "slug": "appointment-with-death",
+      "year": 1938
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Hercule Poirot's Christmas",
+      "order": 16,
+      "slug": "hercule-poirots-christmas",
+      "year": 1938
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Sad Cypress",
+      "order": 17,
+      "slug": "sad-cypress",
+      "year": 1940
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Evil Under The Sun",
+      "order": 18,
+      "slug": "evil-under-the-sun",
+      "year": 1941
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "One, Two, Buckle My Shoe",
+      "order": 19,
+      "slug": "one-two-buckle-my-shoe",
+      "year": 1940
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "The Hollow",
+      "order": 20,
+      "slug": "the-hollow",
+      "year": 1946
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Taken At The Flood",
+      "order": 21,
+      "slug": "taken-at-the-flood",
+      "year": 1948
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Mrs McGinty's Dead",
+      "order": 22,
+      "slug": "mrs-mcgintys-dead",
+      "year": 1952
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "After the Funeral",
+      "order": 23,
+      "slug": "after-the-funeral",
+      "year": 1953
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Hercule Poirot and the Greenshore Folly",
+      "order": 24,
+      "slug": "hercule-poirot-and-the-greenshore-folly",
+      "year": 1954
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Hickory Dickory Dock",
+      "order": 25,
+      "slug": "hickory-dickory-dock",
+      "year": 1955
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Dead Man's Folly",
+      "order": 26,
+      "slug": "dead-mans-folly",
+      "year": 1956
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Cat Among the Pigeons",
+      "order": 27,
+      "slug": "cat-among-the-pigeons",
+      "year": 1959
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "The Clocks",
+      "order": 28,
+      "slug": "the-clocks",
+      "year": 1963
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Third Girl",
+      "order": 29,
+      "slug": "third-girl",
+      "year": 1966
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Hallowe'en Party",
+      "order": 30,
+      "slug": "halloween-party",
+      "year": 1969
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Elephants Can Remember",
+      "order": 31,
+      "slug": "elephants-can-remember",
+      "year": 1972
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Curtain",
+      "order": 32,
+      "slug": "curtain",
+      "year": 1975
+    },
+    {
+      "cat": "the-poirot-novels",
+      "title": "Black Coffee",
+      "order": 33,
+      "slug": "black-coffee",
+      "year": 1998
+    },
+    {
+      "cat": "the-poirot-short-story-collections",
+      "title": "Poirot Investigates",
+      "order": 1,
+      "slug": "poirot-investigates",
+      "year": 1924
+    },
+    {
+      "cat": "the-poirot-short-story-collections",
+      "title": "Murder in the Mews",
+      "order": 2,
+      "slug": "murder-in-the-mews",
+      "year": 1937
+    },
+    {
+      "cat": "the-poirot-short-story-collections",
+      "title": "The Labours of Hercules",
+      "order": 3,
+      "slug": "the-labours-of-hercules",
+      "year": 1947
+    },
+    {
+      "cat": "the-poirot-short-story-collections",
+      "title": "The Adventure of the Christmas Pudding (Poirot and Miss Marple short stories)",
+      "order": 4,
+      "slug": "the-adventure-of-the-christmas-pudding-poirot-and-miss-marple-short-stories",
+      "year": 1960
+    },
+    {
+      "cat": "the-poirot-short-story-collections",
+      "title": "Poirot's Early Cases",
+      "order": 5,
+      "slug": "poirots-early-cases",
+      "year": 1974
+    },
+    {
+      "cat": "poirot-novels-written-by-sophie-hannah",
+      "title": "The Monogram Murders",
+      "order": 1,
+      "slug": "the-monogram-murders",
+      "year": 2014
+    },
+    {
+      "cat": "poirot-novels-written-by-sophie-hannah",
+      "title": "Closed Casket",
+      "order": 2,
+      "slug": "closed-casket",
+      "year": 2016
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "The Murder at the Vicarage",
+      "order": 1,
+      "slug": "the-murder-at-the-vicarage",
+      "year": 1930
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "The Body in the Library",
+      "order": 2,
+      "slug": "the-body-in-the-library",
+      "year": 1942
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "The Moving Finger",
+      "order": 3,
+      "slug": "the-moving-finger",
+      "year": 1943
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "A Murder Is Announced",
+      "order": 4,
+      "slug": "a-murder-is-announced",
+      "year": 1950
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "They Do it with Mirrors",
+      "order": 5,
+      "slug": "they-do-it-with-mirrors",
+      "year": 1952
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "A Pocket Full of Rye",
+      "order": 6,
+      "slug": "a-pocket-full-of-rye",
+      "year": 1953
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "4.50 From Paddington",
+      "order": 7,
+      "slug": "450-from-paddington",
+      "year": 1957
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "The Mirror Crack'd from Side to Side",
+      "order": 8,
+      "slug": "the-mirror-crackd-from-side-to-side",
+      "year": 1962
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "A Caribbean Mystery",
+      "order": 9,
+      "slug": "a-caribbean-mystery",
+      "year": 1964
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "At Bertram's Hotel",
+      "order": 10,
+      "slug": "at-bertrams-hotel",
+      "year": 1965
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "Nemesis",
+      "order": 11,
+      "slug": "nemesis",
+      "year": 1971
+    },
+    {
+      "cat": "the-miss-marple-novels",
+      "title": "Sleeping Murder",
+      "order": 12,
+      "slug": "sleeping-murder",
+      "year": 1976
+    },
+    {
+      "cat": "the-miss-marple-short-story-collections",
+      "title": "The Thirteen Problems",
+      "order": 1,
+      "slug": "the-thirteen-problems",
+      "year": 1932
+    },
+    {
+      "cat": "the-miss-marple-short-story-collections",
+      "title": "The Adventure of the Christmas Pudding",
+      "order": 2,
+      "slug": "the-adventure-of-the-christmas-pudding",
+      "year": 1960
+    },
+    {
+      "cat": "the-miss-marple-short-story-collections",
+      "title": "Miss Marple's Final Cases",
+      "order": 3,
+      "slug": "miss-marples-final-cases",
+      "year": 1979
+    },
+    {
+      "cat": "the-tommy-and-tuppence-novels",
+      "title": "The Secret Adversary",
+      "order": 1,
+      "slug": "the-secret-adversary",
+      "year": 1922
+    },
+    {
+      "cat": "the-tommy-and-tuppence-novels",
+      "title": "N or M",
+      "order": 2,
+      "slug": "n-or-m",
+      "year": 1941
+    },
+    {
+      "cat": "the-tommy-and-tuppence-novels",
+      "title": "By the Pricking of My Thumbs",
+      "order": 3,
+      "slug": "by-the-pricking-of-my-thumbs",
+      "year": 1968
+    },
+    {
+      "cat": "the-tommy-and-tuppence-novels",
+      "title": "Postern of Fate",
+      "order": 4,
+      "slug": "postern-of-fate",
+      "year": 1973
+    },
+    {
+      "cat": "the-tommy-and-tuppence-short-story-collection",
+      "title": "Partners in Crime",
+      "order": 0,
+      "slug": "partners-in-crime",
+      "year": 1929
+    },
+    {
+      "cat": "novels-written-as-part-of-the-detection-club",
+      "title": "The Floating Admiral",
+      "order": 1,
+      "slug": "the-floating-admiral",
+      "year": 1931
+    },
+    {
+      "cat": "novels-written-as-part-of-the-detection-club",
+      "title": "Ask A Policeman",
+      "order": 2,
+      "slug": "ask-a-policeman",
+      "year": 1933
+    },
+    {
+      "cat": "novels-written-as-part-of-the-detection-club",
+      "title": "Six Against The Yard",
+      "order": 3,
+      "slug": "six-against-the-yard",
+      "year": 1989
+    },
+    {
+      "cat": "novels-as-mary-westmacott",
+      "title": "Giant's Bread",
+      "order": 1,
+      "slug": "giants-bread",
+      "year": 1930
+    },
+    {
+      "cat": "novels-as-mary-westmacott",
+      "title": "Unfinished Portrait",
+      "order": 2,
+      "slug": "unfinished-portrait",
+      "year": 1934
+    },
+    {
+      "cat": "novels-as-mary-westmacott",
+      "title": "Absent in the Spring",
+      "order": 3,
+      "slug": "absent-in-the-spring",
+      "year": 1944
+    },
+    {
+      "cat": "novels-as-mary-westmacott",
+      "title": "The Rose and the Yew Tree",
+      "order": 4,
+      "slug": "the-rose-and-the-yew-tree",
+      "year": 1948
+    },
+    {
+      "cat": "novels-as-mary-westmacott",
+      "title": "A Daughter's A Daughter",
+      "order": 5,
+      "slug": "a-daughters-a-daughter",
+      "year": 1952
+    },
+    {
+      "cat": "novels-as-mary-westmacott",
+      "title": "The Burden",
+      "order": 6,
+      "slug": "the-burden",
+      "year": 1956
+    },
+    {
+      "cat": "other-novels",
+      "title": "The Man in the Brown Suit",
+      "order": 1,
+      "slug": "the-man-in-the-brown-suit",
+      "year": 1924
+    },
+    {
+      "cat": "other-novels",
+      "title": "The Secret of Chimneys",
+      "order": 2,
+      "slug": "the-secret-of-chimneys",
+      "year": 1925
+    },
+    {
+      "cat": "other-novels",
+      "title": "The Seven Dials Mystery",
+      "order": 3,
+      "slug": "the-seven-dials-mystery",
+      "year": 1929
+    },
+    {
+      "cat": "other-novels",
+      "title": "The Sittaford Mystery",
+      "order": 4,
+      "slug": "the-sittaford-mystery",
+      "year": 1931
+    },
+    {
+      "cat": "other-novels",
+      "title": "Why Didn't They Ask Evans?",
+      "order": 5,
+      "slug": "why-didnt-they-ask-evans",
+      "year": 1934
+    },
+    {
+      "cat": "other-novels",
+      "title": "Three Act Tragedy",
+      "order": 6,
+      "slug": "three-act-tragedy",
+      "year": 1935
+    },
+    {
+      "cat": "other-novels",
+      "title": "Murder is Easy",
+      "order": 7,
+      "slug": "murder-is-easy",
+      "year": 1939
+    },
+    {
+      "cat": "other-novels",
+      "title": "And Then There Were None (aka: Ten Little N...)",
+      "order": 8,
+      "slug": "and-then-there-were-none",
+      "year": 1939
+    },
+    {
+      "cat": "other-novels",
+      "title": "Five Little Pigs",
+      "order": 9,
+      "slug": "five-little-pigs",
+      "year": 1942
+    },
+    {
+      "cat": "other-novels",
+      "title": "Towards Zero",
+      "order": 10,
+      "slug": "towards-zero",
+      "year": 1944
+    },
+    {
+      "cat": "other-novels",
+      "title": "Death Comes At The End",
+      "order": 11,
+      "slug": "death-comes-at-the-end",
+      "year": 1945
+    },
+    {
+      "cat": "other-novels",
+      "title": "Sparkling Cyanide",
+      "order": 12,
+      "slug": "sparkling-cyanide",
+      "year": 1945
+    },
+    {
+      "cat": "other-novels",
+      "title": "Crooked House",
+      "order": 13,
+      "slug": "crooked-house",
+      "year": 1949
+    },
+    {
+      "cat": "other-novels",
+      "title": "They Came to Baghdad",
+      "order": 14,
+      "slug": "they-came-to-baghdad",
+      "year": 1951
+    },
+    {
+      "cat": "other-novels",
+      "title": "Destination Unknown",
+      "order": 15,
+      "slug": "destination-unknown",
+      "year": 1954
+    },
+    {
+      "cat": "other-novels",
+      "title": "Ordeal By Innocence",
+      "order": 16,
+      "slug": "ordeal-by-innocence",
+      "year": 1958
+    },
+    {
+      "cat": "other-novels",
+      "title": "The Pale Horse",
+      "order": 17,
+      "slug": "the-pale-horse",
+      "year": 1961
+    },
+    {
+      "cat": "other-novels",
+      "title": "Endless Night",
+      "order": 18,
+      "slug": "endless-night",
+      "year": 1967
+    },
+    {
+      "cat": "other-novels",
+      "title": "Passenger to Frankfurt",
+      "order": 19,
+      "slug": "passenger-to-frankfurt",
+      "year": 1970
+    },
+    {
+      "cat": "other-novels",
+      "title": "The Unexpected Guest",
+      "order": 20,
+      "slug": "the-unexpected-guest",
+      "year": 1958
+    },
+    {
+      "cat": "other-novels",
+      "title": "Spider's Web",
+      "order": 21,
+      "slug": "spiders-web",
+      "year": 1954
+    },
+    {
+      "cat": "other-short-story-collections",
+      "title": "The Mysterious Mr Quin",
+      "order": 1,
+      "slug": "the-mysterious-mr-quin",
+      "year": 1930
+    },
+    {
+      "cat": "other-short-story-collections",
+      "title": "The Listerdale Mystery",
+      "order": 2,
+      "slug": "the-listerdale-mystery",
+      "year": 1934
+    },
+    {
+      "cat": "other-short-story-collections",
+      "title": "Parker Pyne Investigates",
+      "order": 3,
+      "slug": "parker-pyne-investigates",
+      "year": 1934
+    }
+  ]
+}
