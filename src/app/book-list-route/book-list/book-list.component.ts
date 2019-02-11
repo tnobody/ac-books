@@ -1,11 +1,13 @@
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import {BooksByCategory} from '../../state/state-map.model';
+import { ChangeDetectionStrategy, Component, Input, ElementRef } from '@angular/core';
+import { BooksByCategory } from '../../state/state-map.model';
+import { delay } from 'rxjs/operators';
+import { of } from 'rxjs/internal/observable/of';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'acb-book-list',
   template: `
-    <mat-list>
+    <mat-list >
       <ng-container *ngFor="let bbc of booksByCategory">
         <mat-divider></mat-divider>
         <h3 mat-subheader>
@@ -22,5 +24,19 @@ import {BooksByCategory} from '../../state/state-map.model';
 export class BookListComponent {
 
   @Input() booksByCategory: BooksByCategory[];
+
+  get contentScroll(): number {
+    return this.elRef.nativeElement.scrollTop;
+  }
+
+  set contentScroll(scroll: number) {
+    delay(250)(of(scroll)).subscribe(s => {
+      this.elRef.nativeElement.scrollTop = s;
+    });
+  }
+
+  constructor(
+    readonly elRef: ElementRef
+  ) { }
 
 }

@@ -51,7 +51,9 @@ import {environment} from '../environments/environment';
     BrowserModule,
     CommonModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'disabled'
+    }),
     StateModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],

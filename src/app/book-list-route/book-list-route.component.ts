@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
-import {MatTabChangeEvent} from '@angular/material';
-import {StateService} from '../state/state.service';
-import {isReadingStatus} from '../state/filter/filte-state.model';
-import {Book} from '../state/books/book.model';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTabChangeEvent } from '@angular/material';
+import { StateService } from '../state/state.service';
+import { isReadingStatus } from '../state/filter/filte-state.model';
+import { BookListComponent } from './book-list/book-list.component';
+import { ActivatedRoute } from '@angular/router';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'acb-book-list-route',
@@ -13,6 +14,7 @@ import {Book} from '../state/books/book.model';
       (category)="state.setCategoryFilter($event)"
     ></acb-search>
     <acb-book-list
+      #bookList
       [booksByCategory]="state.filteredBooksByCategory$ | async"
     ></acb-book-list>
     <div>
@@ -45,15 +47,25 @@ import {Book} from '../state/books/book.model';
 })
 export class BookListRouteComponent implements OnInit {
 
+  @ViewChild(BookListComponent) bookList: BookListComponent;
+
+  getContentScroll(): any {
+    return this.bookList.contentScroll;
+  }
+
   constructor(
-    readonly state: StateService
+    readonly state: StateService,
+    readonly route: ActivatedRoute
   ) {
   }
 
   ngOnInit() {
+    this.state.contentScroll$.pipe(first()).subscribe(scroll => {
+      this.bookList.contentScroll = scroll;
+    });
   }
 
-  filterChanged({index}: MatTabChangeEvent) {
+  filterChanged({ index }: MatTabChangeEvent) {
     if (isReadingStatus(index)) {
       this.state.setReadingStatus(index);
     }

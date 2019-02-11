@@ -7,7 +7,7 @@ import {ReadingStatus} from './filter/filte-state.model';
 import {selectFilter, selectReadingState} from './filter/filter-selector.class';
 import {selectAllCategories, selectCategories} from './categories/categories-selector.class';
 import {BookService} from '../book.service';
-import {combineLatest} from 'rxjs';
+import {combineLatest, of} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Category} from './categories/categories.model';
 import {Book} from './books/book.model';
@@ -15,6 +15,8 @@ import {selectBookReadByBook, selectBooksByCategory, selectFilteredBooks, select
 import {Languages} from './book-read/book-read.model';
 import {SetLanguageRead, SetRead} from './book-read/book-read.actions';
 import {selectBookRead} from './book-read/book-read-selector.class';
+import { SetContentScroll } from './layout/layout-actions';
+import { selectContentScroll } from './layout/layout-selector.class';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +32,16 @@ export class StateService {
       this.bookService.getCategories().pipe(map(cats => new SetCategories(cats))),
     ).subscribe((actions: Action[]) => actions.forEach(action => this.store.dispatch(action)));
   }
+
+  /** Layout */
+  setContentScroll(scroll: number): any {
+    this.store.dispatch(new SetContentScroll(scroll));
+  }
+
+  get contentScroll$() {
+    return this.store.pipe(select(selectContentScroll));
+  }
+
 
   /** Filter */
 

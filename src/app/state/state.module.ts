@@ -8,6 +8,8 @@ import {environment} from 'src/environments/environment';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {BookReadStateModule} from './book-read/book-read-state.module';
 import {EffectsModule} from '@ngrx/effects';
+import { LayoutStateInit } from './layout/layout.model';
+import { LayoutStateModule } from './layout/layout-state.module';
 
 @NgModule({
   declarations: [],
@@ -16,11 +18,13 @@ import {EffectsModule} from '@ngrx/effects';
     FilterStateModule,
     CategoryStateModule,
     BookReadStateModule,
+    LayoutStateModule,
     StoreModule.forRoot({} as any, {
       initialState: {
         filter: filterStateInit,
         books: {},
-        category: {}
+        category: {},
+        layout: LayoutStateInit
       }
     }),
     EffectsModule.forRoot([]),
