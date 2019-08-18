@@ -49,7 +49,7 @@ import zipcelx from 'zipcelx';
           </ng-container>
         </mat-select>
       </mat-form-field>
-      <button mat-icon-button (click)="download($event)">
+      <button mat-icon-button (click)="download()">
         <mat-icon>cloud_download</mat-icon>
       </button>
     </mat-toolbar>
