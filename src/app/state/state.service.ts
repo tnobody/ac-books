@@ -17,6 +17,7 @@ import {SetLanguageRead, SetRead} from './book-read/book-read.actions';
 import {selectBookRead} from './book-read/book-read-selector.class';
 import { SetContentScroll } from './layout/layout-actions';
 import { selectContentScroll } from './layout/layout-selector.class';
+import { selectAllBooks } from './books/book-selector.class';
 
 @Injectable({
   providedIn: 'root'
@@ -75,6 +76,10 @@ export class StateService {
 
   setBooks(books: Book[]) {
     this.store.dispatch(new SetBooks(books));
+  }
+
+  get allBooks$() {
+    return this.store.pipe(select(selectAllBooks));
   }
 
   get categories$() {

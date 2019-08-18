@@ -1,8 +1,11 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {map} from 'rxjs/internal/operators';
+import {map, first} from 'rxjs/internal/operators';
 import {MatSelectChange} from '@angular/material';
 import {StateService} from '../state/state.service';
 import {Category} from '../state/categories/categories.model';
+import { combineLatest } from 'rxjs';
+import {ExportService} from '../export.service';
+import zipcelx from 'zipcelx';
 
 @Component({
   selector: 'acb-search',
@@ -13,8 +16,8 @@ import {Category} from '../state/categories/categories.model';
     <ng-template #hasNoValue>
       <mat-icon matSuffix>search</mat-icon>
     </ng-template>
-    <mat-toolbar 
-      color="primary" 
+    <mat-toolbar
+      color="primary"
       class="mat-elevation-z2 mat-body"
       style="padding-right: 32px"
     >
@@ -43,10 +46,12 @@ import {Category} from '../state/categories/categories.model';
               <span>{{cat[0].title}}</span>
               ({{cat[1].length}})
             </mat-option>
-            <!--<pre>{{cat | json}}</pre>-->
           </ng-container>
         </mat-select>
       </mat-form-field>
+      <button mat-icon-button (click)="download($event)">
+        <mat-icon>cloud_download</mat-icon>
+      </button>
     </mat-toolbar>
   `,
   styles: [`
@@ -72,6 +77,7 @@ export class SearchComponent implements OnInit {
 
   constructor(
     readonly state: StateService,
+    readonly xlsexport: ExportService
   ) {
   }
 
@@ -81,6 +87,18 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  download() {
+    combineLatest(
+      this.state.allBooks$,
+      this.state.bookRead$
+    ).pipe(
+      first(),
+      map(([allBooks, bookRead]) => this.xlsexport.createSheetData(allBooks, bookRead))
+    ).subscribe(d => {
+        this.xlsexport.export(d);
+    });
   }
 
 }

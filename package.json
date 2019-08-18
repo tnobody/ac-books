@@ -33,6 +33,8 @@
     "flag-icon-css": "^3.2.1",
     "material-design-icons": "^3.0.1",
     "rxjs": "^6.3.3",
+    "stream": "0.0.2",
+    "zipcelx": "^1.6.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
@@ -43,6 +45,7 @@
     "@types/jasmine": "~2.8.9",
     "@types/jasminewd2": "~2.0.5",
     "@types/node": "~10.12.0",
+    "@types/zipcelx": "^1.5.0",
     "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~3.2.1",
