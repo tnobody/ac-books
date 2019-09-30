@@ -9,7 +9,7 @@
       "urls": [
         "/ac-books/favicon.ico",
         "/ac-books/index.html",
-        "/ac-books/main.ac908b01589c81d5da58.js",
+        "/ac-books/main.69d3e53029094d835944.js",
         "/ac-books/polyfills.f6ae3e8b63939c618130.js",
         "/ac-books/runtime.ec2944dd8b20ec099bf3.js",
         "/ac-books/styles.fd8b2232f327afdcd9b0.css"
@@ -196,8 +196,8 @@
     "/ac-books/assets/images/Unfinished_Portrait_First_Edition_Cover.jpg": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/ac-books/assets/images/Why_Didn%27t_They_Ask_Evans_First_Edition_Cover_1934.jpg": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/ac-books/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/ac-books/index.html": "b79da7f07103ac5a7fa588c451b3a73c035be366",
-    "/ac-books/main.ac908b01589c81d5da58.js": "90ffcd049d942f5c88c8b97a862759d1005d64b5",
+    "/ac-books/index.html": "90722c31d7da5ce9bb79624d96504c014b58875a",
+    "/ac-books/main.69d3e53029094d835944.js": "728426d7588f99cbffa1199b51b38363a271d40f",
     "/ac-books/polyfills.f6ae3e8b63939c618130.js": "edc0e79fc6315db4d76b2e7e56702677a06e24c1",
     "/ac-books/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/ac-books/styles.fd8b2232f327afdcd9b0.css": "bce51780aa4cba7599a72ae1d322452f9c2650fb"
