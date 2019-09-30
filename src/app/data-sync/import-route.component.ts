@@ -4,7 +4,6 @@ import { Observable, combineLatest } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { StateService } from '../state/state.service';
 import { decodeBooksRead, BookRead } from '../state/book-read/book-read.model';
-import { Book } from '../state/books/book.model';
 import { BookWithRead } from '../state/state-map.model';
 import { MatSnackBar } from '@angular/material';
 

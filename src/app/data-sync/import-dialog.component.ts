@@ -10,8 +10,6 @@ import { ExportService } from '../export.service';
             [torch]="torchEnabled"
             [(device)]="currentDevice"
             (scanSuccess)="onCodeResult($event)"
-            [formats]="formatsEnabled"
-            [tryHarder]="tryHarder"
             (permissionResponse)="onHasPermission($event)"
             (camerasFound)="onCamerasFound($event)"
             (torchCompatible)="onTorchCompatible($event)">
