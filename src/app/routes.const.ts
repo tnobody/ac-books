@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { BookListRouteComponent } from './book-list-route/book-list-route.component';
 import { BookRouteComponent } from './book-route/book-route.component';
 import { PersitsScrollOnLeaveGuardGuard } from './persits-scroll-on-leave-guard.guard';
-import { RestoreScrollPositionResolver } from './restore-scroll-position.resolver';
+import { ImportRouteComponent } from './data-sync/import-route.component';
 
 export const routes: Routes = [
     {
@@ -21,4 +21,8 @@ export const routes: Routes = [
         component: BookRouteComponent,
         data: { animation: 'BookPage' }
     },
+    {
+        path: 'import',
+        component: ImportRouteComponent
+    }
 ];

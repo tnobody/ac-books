@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import { Book } from './state/books/book.model';
-import { BookRead, createBookRead} from './state/book-read/book-read.model';
+import { BookRead, createBookRead, encodeBooksRead} from './state/book-read/book-read.model';
 import {ZipCelXSheet, ZipCelXDataSet, ZipCelXRow, ZipCelXCell} from 'zipcelx';
 import zipcelx from 'zipcelx';
 
@@ -38,6 +38,16 @@ export class ExportService {
             this.header,
             ...rows
         ];
+    }
+
+    createQrData(
+        books: Book[],
+        reads: Record<string, BookRead>
+    ): string {
+        const data = this.mergeData(books, reads);
+        return data
+            .map(encodeBooksRead)
+            .join('x');
     }
 
     private mergeData(

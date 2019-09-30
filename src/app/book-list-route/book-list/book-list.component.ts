@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, ElementRef } from '@angular/core';
-import { BooksByCategory } from '../../state/state-map.model';
+import { ChangeDetectionStrategy, Component, Input, ElementRef, Output, EventEmitter } from '@angular/core';
+import { BooksByCategory, BookWithRead } from '../../state/state-map.model';
 import { delay } from 'rxjs/operators';
 import { of } from 'rxjs/internal/observable/of';
 
@@ -15,7 +15,7 @@ import { of } from 'rxjs/internal/observable/of';
           <span>{{bbc[0].title}}</span>
         </h3>
         <mat-divider></mat-divider>
-        <acb-book-list-entry [books]="bbc[1]"></acb-book-list-entry>
+        <acb-book-list-entry [books]="bbc[1]" (entryClick)="entryClick.next($event)"></acb-book-list-entry>
       </ng-container>
     </mat-list>
   `,
@@ -24,6 +24,7 @@ import { of } from 'rxjs/internal/observable/of';
 export class BookListComponent {
 
   @Input() booksByCategory: BooksByCategory[];
+  @Output() entryClick = new EventEmitter<BookWithRead>();
 
   get contentScroll(): number {
     return this.elRef.nativeElement.scrollTop;

@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 import {BookWithRead} from '../../state/state-map.model';
 
 @Component({
@@ -6,7 +6,7 @@ import {BookWithRead} from '../../state/state-map.model';
   selector: 'acb-book-list-entry',
   template: `
     <ng-container *ngFor="let book of books">
-      <mat-list-item [routerLink]="['book', book[0].slug]">
+      <mat-list-item (click)="entryClick.next(book)">
         <mat-icon mat-list-icon *ngIf="book[1].read">done</mat-icon>
         <h3 matLine>
           <span>{{book[0].title}} </span>
@@ -21,6 +21,9 @@ import {BookWithRead} from '../../state/state-map.model';
     </ng-container>
   `,
   styles: [`
+    mat-list-item {
+      cursor: pointer;
+    }
     .deemphasized {
       color: silver;
     }
@@ -29,5 +32,7 @@ import {BookWithRead} from '../../state/state-map.model';
 export class BookListEntryComponent {
 
   @Input() books: BookWithRead[];
+  @Output() entryClick = new EventEmitter<BookWithRead>();
+
 
 }

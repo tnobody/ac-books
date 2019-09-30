@@ -1,11 +1,13 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {map, first} from 'rxjs/internal/operators';
-import {MatSelectChange} from '@angular/material';
-import {StateService} from '../state/state.service';
-import {Category} from '../state/categories/categories.model';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { map, first, take } from 'rxjs/internal/operators';
+import { MatSelectChange, MatDialog } from '@angular/material';
+import { StateService } from '../state/state.service';
+import { Category } from '../state/categories/categories.model';
 import { combineLatest } from 'rxjs';
-import {ExportService} from '../export.service';
-import zipcelx from 'zipcelx';
+import { ExportService } from '../export.service';
+import { ExportDialogComponent } from '../data-sync/export-dialog.component';
+import { ImportDialogComponent } from '../data-sync/import-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'acb-search',
@@ -49,10 +51,21 @@ import zipcelx from 'zipcelx';
           </ng-container>
         </mat-select>
       </mat-form-field>
-      <button mat-icon-button (click)="download()">
-        <mat-icon>cloud_download</mat-icon>
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
       </button>
     </mat-toolbar>
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item (click)="download()">
+          <mat-icon>cloud_download</mat-icon> Download Excel
+        </button>
+        <button mat-menu-item (click)="openExportDialog()">
+          <mat-icon>import_export</mat-icon> Export
+        </button>
+        <button mat-menu-item (click)="openImportDialog()">
+          <mat-icon>import_export</mat-icon> Import
+        </button>
+      </mat-menu>
   `,
   styles: [`
 
@@ -77,7 +90,9 @@ export class SearchComponent implements OnInit {
 
   constructor(
     readonly state: StateService,
-    readonly xlsexport: ExportService
+    readonly exportService: ExportService,
+    readonly dialog: MatDialog,
+    readonly router: Router
   ) {
   }
 
@@ -89,16 +104,40 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  download() {
-    combineLatest(
+  get exportData$() {
+    return combineLatest(
       this.state.allBooks$,
       this.state.bookRead$
-    ).pipe(
-      first(),
-      map(([allBooks, bookRead]) => this.xlsexport.createSheetData(allBooks, bookRead))
+    ).pipe(first());
+  }
+
+  download() {
+    this.exportData$.pipe(
+      map(([allBooks, bookRead]) => this.exportService.createSheetData(allBooks, bookRead))
     ).subscribe(d => {
-        this.xlsexport.export(d);
+      this.exportService.export(d);
     });
+  }
+
+  openExportDialog() {
+    this.exportData$.pipe(
+      map(([allBooks, bookRead]) => this.exportService.createQrData(allBooks, bookRead)),
+      take(1),
+    ).subscribe(qrValue => {
+      this.dialog.open(ExportDialogComponent, {
+        data: { qrValue }
+      });
+    });
+  }
+
+  openImportDialog() {
+    this.dialog.open(ImportDialogComponent, {})
+      .afterClosed()
+      .subscribe(data => {
+        if (data) {
+          this.router.navigate(['/import'], { queryParams: { data } });
+        }
+      });
   }
 
 }

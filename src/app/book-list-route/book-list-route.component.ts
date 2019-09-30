@@ -3,8 +3,9 @@ import { MatTabChangeEvent } from '@angular/material';
 import { StateService } from '../state/state.service';
 import { isReadingStatus } from '../state/filter/filte-state.model';
 import { BookListComponent } from './book-list/book-list.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { BookWithRead } from '../state/state-map.model';
 
 @Component({
   selector: 'acb-book-list-route',
@@ -16,6 +17,7 @@ import { first } from 'rxjs/operators';
     <acb-book-list
       #bookList
       [booksByCategory]="state.filteredBooksByCategory$ | async"
+      (entryClick)="onEntryClick($event)"
     ></acb-book-list>
     <div>
       <mat-tab-group
@@ -55,7 +57,8 @@ export class BookListRouteComponent implements OnInit {
 
   constructor(
     readonly state: StateService,
-    readonly route: ActivatedRoute
+    readonly route: ActivatedRoute,
+    readonly router: Router
   ) {
   }
 
@@ -69,6 +72,10 @@ export class BookListRouteComponent implements OnInit {
     if (isReadingStatus(index)) {
       this.state.setReadingStatus(index);
     }
+  }
+
+  onEntryClick([book, read]: BookWithRead) {
+    this.router.navigate(['book', book.slug]);
   }
 
 }
